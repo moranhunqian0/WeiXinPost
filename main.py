@@ -416,7 +416,7 @@ tasks = {
     "10:00": send_PillB_Message,
     "13:00": send_PillB_Message,
     "20:00": send_PillB_Message,
-    "16:40": send_PillB_Message
+    "16:55": send_PillB_Message
     
 }
 
@@ -430,9 +430,9 @@ if __name__ == '__main__':
     # 传入省份和市获取天气信息
     province, city = config.province, config.city
     weather, max_temperature, min_temperature = get_weather(province, city)
-    start_time = datetime.datetime.now()
-    while (datetime.datetime.now() - start_time).seconds <= 600:  # 10 minutes
-        now = datetime.datetime.now().time()  # get the current time
+    start_time = datetime.now()
+    while (datetime.now() - start_time).seconds <= 600:  # 10 minutes
+        now = datetime.now().time()  # get the current time
         now_str = now.strftime("%H:%M")  # convert time object to string
         if now_str in tasks:
             tasks[now_str]()  # execute the task
