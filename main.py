@@ -415,7 +415,9 @@ tasks = {
     "18:30": send_PillA_Message,
     "10:00": send_PillB_Message,
     "13:00": send_PillB_Message,
-    "20:00": send_PillB_Message
+    "20:00": send_PillB_Message,
+    "16:40": send_PillB_Message
+    
 }
 
 if __name__ == '__main__':
